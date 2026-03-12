@@ -121,15 +121,15 @@
 
 <header>
     <h1>Privacy Policy</h1>
-    <div class="meta">Routine : Diary app | Version 1.0.0</div>
-    <div class="meta">Effective Date: February 20, 2026</div>
+    <div class="meta">Routine : Diary app | Version 1.0.2</div>
+    <div class="meta">Effective Date: March 12, 2026</div>
 </header>
 
 <section>
-    <p><strong>Routine : Diary app</strong> is developed by Amal Jose and is provided as a free, offline diary application. This service is intended for personal use as-is.</p>
+    <p><strong>Routine : Diary app</strong> is developed by Amal Jose and is provided as a free, offline-first diary application. This service is intended for personal use as-is.</p>
 
     <div class="summary-box">
-        <strong>Summary:</strong> Routine is a fully offline diary app. We do not collect, store, transmit, or share any personal data. All your entries remain securely on your device.
+        <strong>Summary:</strong> Routine respects your privacy completely. All your diary entries, images, and personal data are stored exclusively on your device. We do not collect, upload, or share any personal information. The app only connects to the internet to download optional background images and stickers from Supabase – no user data is ever transmitted.
     </div>
 </section>
 
@@ -150,25 +150,38 @@
 <section>
     <h2>2. Local Data Storage (sqflite)</h2>
     <p>
-        All diary entries and related data are stored locally on your device using a local SQLite database via the Flutter <strong>sqflite</strong> package.
+        All diary entries, images, stickers, and app settings are stored locally on your device using a local SQLite database via the Flutter <strong>sqflite</strong> package. 
+        Your data never leaves your device and is not transmitted to any external servers.
     </p>
     <p>
-        Your information never leaves your device and is not transmitted to any external servers.
+        The optional lock screen feature uses your device’s built‑in authentication (PIN, pattern, or biometric) to protect access. No credentials are stored by the app.
     </p>
 </section>
 
 <section>
-    <h2>3. Internet Usage</h2>
+    <h2>3. Internet Usage – Supabase Integration</h2>
     <p>
-        Routine functions entirely offline and does not require an internet connection. 
-        The app does not send or receive data over the internet.
+        Routine functions fully offline, but it can connect to the internet solely to download optional visual content:
+    </p>
+    <ul>
+        <li><strong>Background images</strong> – a curated set is downloaded from Supabase when you choose a new background.</li>
+        <li><strong>Stickers</strong> – sticker packs are downloaded from Supabase when you select them.</li>
+    </ul>
+    <p>
+        These downloads reduce the app’s installation size. The app only retrieves files; it never uploads any user data, device information, or analytics to Supabase or any other server. All downloaded files are stored locally on your device.
     </p>
 </section>
 
 <section>
     <h2>4. Permissions</h2>
     <p>
-        The app only requests permissions strictly necessary for its core functionality (such as local storage access if required by the Android system). 
+        The app requests only the permissions essential for its core functionality:
+    </p>
+    <ul>
+        <li><strong>Internet</strong> – to download backgrounds and stickers (optional, can be denied).</li>
+        <li><strong>Storage</strong> – to save images you add to your diary and to store downloaded backgrounds/stickers.</li>
+    </ul>
+    <p>
         Routine does not access contacts, location, microphone, camera, or other sensitive device data.
     </p>
 </section>
@@ -177,7 +190,7 @@
     <h2>5. Data Security</h2>
     <p>
         Since all data is stored locally, the security of your information depends on your device’s security measures (screen lock, biometric authentication, etc.). 
-        We do not have access to your diary content.
+        The optional lock screen adds an extra layer of protection using your device’s native authentication system – your credentials are never handled by the app.
     </p>
 </section>
 
@@ -185,7 +198,7 @@
     <h2>6. Data Retention and Deletion</h2>
     <p>
         All data remains on your device until you manually delete it or uninstall the application. 
-        Uninstalling the app will permanently remove all locally stored data.
+        Uninstalling the app will permanently remove all locally stored data, including downloaded backgrounds and stickers.
     </p>
 </section>
 
